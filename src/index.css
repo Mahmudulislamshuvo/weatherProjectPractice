@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+.container {
+  margin: 0 auto;
+}
+
+@theme {
+  --font-Roboto: "Roboto", sans-serif;
+}

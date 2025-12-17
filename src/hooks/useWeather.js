@@ -20,7 +20,7 @@ const useWeather = () => {
     message: "",
   });
   const [error, setError] = useState(null);
-  const { location, setLocation } = useContext(LocationContext);
+  const { location } = useContext(LocationContext);
 
   const fetchWeatherData = async (lat, lon) => {
     try {

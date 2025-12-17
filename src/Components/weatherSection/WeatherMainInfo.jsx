@@ -11,8 +11,6 @@ import { WeatherContext } from "../../context";
 const WeatherMainInfo = () => {
   const { weatherData } = useContext(WeatherContext);
 
-  console.log(weatherData);
-
   if (!weatherData) return null;
 
   const { location, temperature, time, climate } = weatherData;

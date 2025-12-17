@@ -68,6 +68,9 @@ const useWeather = () => {
   };
 
   useEffect(() => {
+    let renderCount = 1;
+    console.log(`How many times it render: ${renderCount++}`);
+
     setLoading((prev) => ({
       ...prev,
       state: true,
@@ -79,7 +82,7 @@ const useWeather = () => {
     });
   }, []);
 
-  return weatherData, loading, error;
+  return { weatherData, loading, error, fetchWeatherData };
 };
 
 export default useWeather;

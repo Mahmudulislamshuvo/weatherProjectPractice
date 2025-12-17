@@ -1,15 +1,16 @@
 import Header from "./Components/header/Header";
 import WeatherSection from "./Components/weatherSection/WeatherSection";
-import useWeather from "./hooks/useWeather";
+import { WeatherProvider } from "./provider";
 
 const App = () => {
   return (
     <>
-      <div></div>
-      <div className="bg-body font-[Roboto] text-light bg-no-repeat bg-cover h-screen grid ">
-        <Header />
-        <WeatherSection />
-      </div>
+      <WeatherProvider>
+        <div className="bg-body font-[Roboto] text-light bg-[url('./assets/backgrounds/clear-sky.jpg')] bg-no-repeat bg-cover h-screen grid ">
+          <Header />
+          <WeatherSection />
+        </div>
+      </WeatherProvider>
     </>
   );
 };

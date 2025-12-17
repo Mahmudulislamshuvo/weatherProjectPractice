@@ -7,10 +7,16 @@ const Search = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const { setLocation } = useContext(LocationContext);
 
-  const handleSearch = () => {
-    const locationFetch = getLocationByName(searchTerm);
-    console.log(locationFetch);
+  const doSearch = (value) => {
+    const locationFetch = getLocationByName(value);
+
     setLocation({ ...locationFetch });
+  };
+
+  const handleChange = (e) => {
+    const value = e.target.value;
+    setSearchTerm(value);
+    doSearch(value);
   };
 
   return (
@@ -21,10 +27,10 @@ const Search = () => {
           type="search"
           placeholder="Search Location"
           required
-          onChange={(e) => setSearchTerm(e.target.value)}
+          onChange={handleChange}
           value={searchTerm}
         />
-        <button onClick={handleSearch} type="submit">
+        <button type="submit">
           <img src={search} alt="searchSvg" />
         </button>
       </div>

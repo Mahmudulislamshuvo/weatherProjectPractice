@@ -4,7 +4,7 @@ const Logo = () => {
   return (
     <>
       <a href="#">
-        <img class="h-9" src={logo} alt="Weather App" />
+        <img className="h-9" src={logo} alt="Weather App" />
       </a>
     </>
   );

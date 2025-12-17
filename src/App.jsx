@@ -1,5 +1,6 @@
 import Header from "./Components/header/Header";
 import WeatherSection from "./Components/weatherSection/WeatherSection";
+import useWeather from "./hooks/useWeather";
 
 const App = () => {
   return (
